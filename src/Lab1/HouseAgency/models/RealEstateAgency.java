@@ -2,13 +2,12 @@ package Lab1.HouseAgency.models;
 
 import Lab1.HouseAgency.enums.PropertyType;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
 public class RealEstateAgency {
-    private String name;
-    private Property[] properties;
+    private final String name;
+    private final Property[] properties;
 
     public RealEstateAgency(String name, Property[] properties) {
         this.name = name;

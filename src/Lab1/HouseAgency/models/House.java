@@ -3,8 +3,8 @@ package Lab1.HouseAgency.models;
 import Lab1.HouseAgency.enums.PropertyType;
 
 public class House extends Property{
-    private int numberOfFloors;
-    private boolean hasGarden;
+    private final int numberOfFloors;
+    private final boolean hasGarden;
 
     public House(double area,
                  double price,

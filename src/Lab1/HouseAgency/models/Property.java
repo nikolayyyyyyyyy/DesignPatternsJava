@@ -6,8 +6,8 @@ import Lab1.HouseAgency.interfaces.Commission;
 
 public abstract class Property implements Commission {
 
-    private double area;
-    private double price;
+    private final double area;
+    private final double price;
     private PropertyType propertyType;
 
     public Property(double area, double price, PropertyType propertyType) {

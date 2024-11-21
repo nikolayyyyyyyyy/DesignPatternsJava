@@ -3,6 +3,7 @@ package Lab1.HouseAgency.models;
 import Lab1.HouseAgency.enums.PropertyType;
 
 public class Shop extends Property{
+
     public Shop(double area,
                 double price,
                 PropertyType propertyType) {

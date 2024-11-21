@@ -4,8 +4,8 @@ import Lab1.HouseAgency.enums.Parking;
 import Lab1.HouseAgency.enums.PropertyType;
 
 public class Office extends Property{
-    private Parking parkingLot;
-    private int numberOfRooms;
+    private final Parking parkingLot;
+    private final int numberOfRooms;
 
     public Office(double area,
                   double price,
