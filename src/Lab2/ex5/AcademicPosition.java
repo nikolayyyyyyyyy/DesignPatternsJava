@@ -1,0 +1,6 @@
+package Lab2.ex5;
+
+public enum AcademicPosition {
+    ASSISTANT,CHIEF_ASSISTANT,LECTURER,SENIOR_LECTURER,
+    ASSOCIATE_PROFESSOR,PROFESSOR
+}
