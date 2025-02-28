@@ -14,7 +14,7 @@ public class Application {
         FileManager.saveKey(alphaNumeric.getFileName(),second);
 
 
-        FileManager.verifyAndRemoveKey(numeric.getFileName(),first);
-        FileManager.verifyAndRemoveKey(alphaNumeric.getFileName(),second);
+        boolean b1 = FileManager.verifyAndRemoveKey(numeric.getFileName(), first);
+        boolean b = FileManager.verifyAndRemoveKey(alphaNumeric.getFileName(), second);
     }
 }
