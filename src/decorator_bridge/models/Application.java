@@ -16,9 +16,10 @@ public class Application {
 
         Book book = new BookImpl(price,resume, Set.of(pages));
 
-        book = new HardCoverBook(book,100, CoverType.LEATHER);
+        book = new EBookDecorator(book);
 
         System.out.println(book.getPrice());
         System.out.println(book.getResume());
+        book.getPages().forEach(System.out::println);
     }
 }
