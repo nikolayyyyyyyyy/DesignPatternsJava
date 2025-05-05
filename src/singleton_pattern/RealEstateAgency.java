@@ -1,4 +1,4 @@
-package design_patterns;
+package singleton_pattern;
 
 import java.util.HashSet;
 import java.util.Set;
