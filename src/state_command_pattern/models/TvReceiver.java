@@ -3,12 +3,12 @@ package state_command_pattern.models;
 import state_command_pattern.contracts.MultimediaReceiver;
 import state_command_pattern.contracts.State;
 
-public class RemoteReceiver implements MultimediaReceiver, State {
+public class TvReceiver implements MultimediaReceiver, State {
     private int channel;
     private int volume;
     private State state;
 
-    public RemoteReceiver() {
+    public TvReceiver() {
         this.channel = 0;
         this.volume = 0;
     }
@@ -43,22 +43,18 @@ public class RemoteReceiver implements MultimediaReceiver, State {
         return "Decreasing volume";
     }
 
-    @Override
     public int getChannel() {
         return this.channel;
     }
 
-    @Override
     public int getVolume() {
         return this.volume;
     }
 
-    @Override
     public State getState() {
         return this.state;
     }
 
-    @Override
     public void setState(State state) {
         this.state = state;
     }

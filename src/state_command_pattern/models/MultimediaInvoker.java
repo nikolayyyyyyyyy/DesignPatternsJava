@@ -9,7 +9,7 @@ public class MultimediaInvoker {
         this.command = command;
     }
 
-    public void execute() {
-        this.command.execute();
+    public String execute() {
+        return this.command.execute();
     }
 }

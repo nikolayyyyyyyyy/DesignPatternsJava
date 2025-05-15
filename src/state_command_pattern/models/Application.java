@@ -1,27 +1,30 @@
 package state_command_pattern.models;
 
 import state_command_pattern.contracts.Command;
-import state_command_pattern.contracts.MultimediaReceiver;
 import state_command_pattern.contracts.State;
 
 public class Application {
     public static void main(String[] args) {
-        MultimediaReceiver radio = new RadioReceiver();
-        State start = new MultimediaStartState();
-        State stop = new MultimediaStopState();
+        TvReceiver tv = new TvReceiver();
+        State start = new TvStartState();
+        State stop = new TvStopState();
+        MultimediaInvoker invoker = new MultimediaInvoker();
 
-        radio.setState(stop);
-        if (radio.getState() instanceof MultimediaStartState) {
+        tv.setState(stop);
+        if (tv.getState() == start) {
+            System.out.println(tv.doAction());
+            Command increaseChannel = new IncreaseChannelCommand(tv);
+            invoker.setCommand(increaseChannel);
+            System.out.println(invoker.execute());
+            System.out.println(tv.getChannel());
 
-            Command increaseChannel = new IncreaseChannelCommand(radio);
-            System.out.println(increaseChannel.execute());
-            System.out.println(radio.getChannel());
+            Command increaseVolume = new IncreaseVolumeCommand(tv);
+            invoker.setCommand(increaseVolume);
+            System.out.println(invoker.execute());
+            System.out.println(tv.getVolume());
 
-            Command increaseVolume = new IncreaseVolumeCommand(radio);
-            System.out.println(increaseVolume.execute());
-            System.out.println(radio.getVolume());
         } else {
-
+            System.out.println(tv.doAction());
             System.out.println("Switch to start state");
         }
     }

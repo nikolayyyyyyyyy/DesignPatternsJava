@@ -2,9 +2,9 @@ package state_command_pattern.models;
 
 import state_command_pattern.contracts.State;
 
-public class MultimediaStopState implements State {
+public class RadioStartState implements State {
     @Override
     public String doAction() {
-        return "Media is stopped";
+        return "Radio is on and it making noises.";
     }
 }

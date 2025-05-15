@@ -43,22 +43,18 @@ public class RadioReceiver implements MultimediaReceiver, State {
         return "Decreasing volume";
     }
 
-    @Override
     public int getChannel() {
         return this.channel;
     }
 
-    @Override
     public int getVolume() {
         return this.volume;
     }
 
-    @Override
     public State getState() {
         return this.state;
     }
 
-    @Override
     public void setState(State state) {
         this.state = state;
     }

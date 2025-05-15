@@ -1,6 +1,6 @@
 package state_command_pattern.contracts;
 
-public interface MultimediaReceiver {
+public interface MultimediaReceiver extends State {
 
     String increaseChannel();
 
@@ -9,12 +9,4 @@ public interface MultimediaReceiver {
     String increaseVolume();
 
     String decreaseVolume();
-
-    int getChannel();
-
-    int getVolume();
-
-    State getState();
-
-    void setState(State state);
 }
