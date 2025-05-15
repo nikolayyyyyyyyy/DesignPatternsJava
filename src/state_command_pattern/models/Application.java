@@ -10,7 +10,7 @@ public class Application {
         State stop = new TvStopState();
         MultimediaInvoker invoker = new MultimediaInvoker();
 
-        tv.setState(stop);
+        tv.setState(start);
         if (tv.getState() == start) {
             System.out.println(tv.doAction());
             Command increaseChannel = new IncreaseChannelCommand(tv);
